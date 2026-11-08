@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - BINGU</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html"><span class="logo-icon">B</span> BINGU</a>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="produk.html">Produk</a>
+            <a class="active" href="pemesanan.html">Pemesanan <span class="cart-count">0</span></a>
+            <a href="tentang.html">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-heading">
+            <p class="eyebrow">Checkout</p>
+            <h1>Form pemesanan BingU</h1>
+            <p>Periksa pilihan produk, lalu isi data pemesanan.</p>
+        </section>
+
+        <div class="checkout-layout">
+            <section class="panel">
+                <h2>Keranjang Belanja</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total"><span>Total</span><strong id="cart-total">Rp0</strong></div>
+                <a class="text-link" href="produk.html">← Tambah produk lainnya</a>
+            </section>
+
+            <section class="panel">
+                <h2>Data Pembeli</h2>
+                <form id="order-form">
+                    <label for="buyer-name">Nama lengkap</label>
+                    <input id="buyer-name" type="text" placeholder="Masukkan nama" required>
+
+                    <label for="buyer-phone">Nomor WhatsApp</label>
+                    <input id="buyer-phone" type="tel" placeholder="Contoh: 081234567890" required>
+
+                    <label for="buyer-address">Alamat</label>
+                    <textarea id="buyer-address" rows="3" placeholder="Masukkan alamat pengiriman" required></textarea>
+
+                    <label for="buyer-note">Catatan (opsional)</label>
+                    <textarea id="buyer-note" rows="2" placeholder="Contoh: Kurangi topping"></textarea>
+
+                    <button class="button full-button" type="submit">Kirim Pesanan via WhatsApp</button>
+                    <p class="small-note">Pesanan akan disiapkan.</p>
+                </form>
+                <p id="order-message" class="form-message" aria-live="polite"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer><p>© 2026 BINGU – Lumpia Ubi Ungu.</p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
